@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denis resume</title>
+    <!-- Добавим мета настройки. 
+        Через name="keywords" добавляем ключевые слова для поиска роботами сайта 
+        Через name="descriotion" добавляем описание сайта в результатах поиска в поисковике-->
+    <meta name="keywords" content="resume, fullstack, developer, experience" >
+    <meta name="descriotion" content="Сайт-резюме fullstack разработчика Дениса Железнякова" >
+
+    <!-- Можно добавить стиль через JS прямо в файле в разделе  <head>
+      точка перед словом означает что это класс:-->
+      <style>
+        .header {
+          border-bottom: 2px solid grey;
+        }
+    
+        .card {
+          background-color: #eee;
+          padding: 10px;
+          margin-bottom: 10px;;
+        }
+    
+        .color {
+          color: red;
+        }
+      </style>
+
+</head>
+<body>
+    <!-- Заголовки -->
+    <h1>Денис Железняков</h1>
+    <h2>Heading2</h2>
+    <h3>Heading3</h3>
+    <h4>Heading4</h4>
+    <h5>Heading5</h5>
+    <h6>Heading6</h6>
+    
+    <!-- Команда lorem5 выводит пять(можно указать другое число)
+    случайных слов. Это удобно, если нужен какойто текст - не нужно печатать:  -->
+    Lorem ipsum dolor sit amet consectetur
+
+    <!-- Тег горизонтальная черта -->
+    <hr>
+
+    <!-- Тег разрыв -->
+    <br>
+
+    <!-- Тег параграф -->
+    <p>тег <strong>параграф</strong>, он <em>отличается</em> от просто текста тем,<br>
+    что имеет <strong><em>начало и конец</em></strong> и может разделять текст</p>
+    
+    <!-- Ссылки создаем через тег <a> на URL-адрес-->
+    <a href="https://www.google.ru/">Текст для отображения ссылки</a>
+    <br>
+    <a href="https://www.google.ru/" target="_blank">Добавили атрибут target="_blank", который открывает ссылку в новой вкладке</a>
+    
+    <p>
+        <!-- Ссылки создаем через тег <a> на фаилв проекте-->
+        <a href="index2.html" target="_blank">Ссылка на фаил "index2.html"</a>
+    </p>
+    
+    <!-- Картинки создаём через одинарный тег <img> . Можно делать ссылку на URL-адрес картинки (открыть картинку в новой вкладке и 
+        копируем адрес), а можно на ссылаться локально на фаил в проекте
+    Атрибуты:
+        src="" - указывает адрес
+        alt="" - в случае не отображения выводит строку с описанием картинки, также этот атрибут используют роботы
+        не рекомендуется атрибут width="150"
+    -->
+    <p>
+        <img src="https://i.pinimg.com/originals/52/19/cd/5219cd15e78546e63c4dcbf3e9ce846a.jpg"
+        alt="Иконка HTML5"
+        width="150">
+
+        <img src="imgs/html5_img.png"
+        alt="Иконка HTML5"
+        width="150">
+    </p>
+    
+    <!-- Списки создаем через тег <ul><li> или <ol><li>-->
+    <!-- Быстрый способ создания: ul>li{Element name $}*5 
+        или аналогично нумеруемый список: ol>li{Element}*3-->
+    
+    <ul>
+        <li>Element name 1</li>
+        <li>Element name 2</li>
+        <li>Element name 3</li>
+        <li>Element name 4</li>
+        <li>Element name 5</li>
+    </ul>
+    <ol>
+        <li>
+            <ul>
+                <li>Вложенный Element</li>
+                <li>Вложенный Element</li>
+            </ul>
+        </li>
+        <li>Element</li>
+        <li>Element</li>
+    </ol>
+    
+    
+    <!-- Таблицы создаем через тег <table>-->
+    
+    <table>
+        <thead>
+            <th>Заг1</th>
+            <th>Заг2</th>
+            <th>Заг3</th>
+        </thead>
+        <tbody>
+            <td>Строка1.1</td>
+            <td>Строка1.2</td>
+            <td>Строка1.3</td>
+        </tbody>
+    </table>
+    
+
+    <!-- Формы (ввод пользователем) -->
+    
+    <form>
+
+        <div>
+          <label for="text">Текст</label>
+          <input type="text" id="text" value="Текст по умолчанию" readonly>
+        </div>
+    
+        <div>
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="Введите email">
+        </div>
+    
+        <div>
+          <label for="password">Пароль</label>
+          <input type="password" id="password">
+        </div>
+    
+        <div>
+          <label for="number">Число</label>
+          <input type="number" id="number" min="0">
+        </div>
+    
+        <div>
+          <label for="range">Range</label>
+          <input type="range" id="range" min="0" max="10" step="1">
+        </div>
+    
+        <div>
+          <label for="date">Дата</label>
+          <input type="date" id="date">
+        </div>
+    
+        <div>
+          <label for="color">Цвет</label>
+          <input type="color" id="color">
+        </div>
+    
+        <div>
+          <label for="message">Сообщение</label>
+          <br>
+          <textarea id="message" cols="25" rows="5"></textarea>
+        </div>
+    
+        <div>
+          <label for="sex">Ваш пол</label>
+          <select id="sex">
+            <option value="male">Мужчина</option>
+            <option value="female" selected>Женщина</option>
+            <option value="other">Другое</option>
+          </select>
+        </div>
+    
+        <div>
+          <label>Количество работ</label>
+          <input type="radio" name="work"> 1
+          <input type="radio" name="work"> 2
+          <input type="radio" name="work"> 5
+          <input type="radio" name="work"> 10+
+        </div>
+    
+        <div>
+          <label>Любимая еда</label>
+          <input type="checkbox" name="food"> Картошка
+          <input type="checkbox" name="food"> Хлеб
+          <input type="checkbox" name="food"> Молюски
+          <input type="checkbox" name="food"> Яблоки
+        </div>
+    
+        <!-- <input type="submit" value="Отправить форму"> -->
+        <button type="submit">Отправить форму</button>
+    
+        <!-- Семантические блоки -->
+        <header id="header" class="header">
+          <h2>Site</h2>
+        </header>
+        
+        <nav id="navigation">
+          <ul>
+            <li><a href="#">Item 1</a></li>
+            <li><a href="#">Item 2</a></li>
+            <li><a href="#">Item 3</a></li>
+          </ul>
+        </nav>
+      
+        <hr>
+      
+      
+        <section> 
+          <article id="block1" class="card header">
+            <h3>Block 1</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. <span class="color"> Soluta nostrum animi sunt consequatur</span> ad natus, eaque alias autem voluptatum doloribus?</p>
+          </article>
+      
+          <article id="block2" class="card">
+            <h3>Block 2</h3>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta nostrum animi sunt consequatur ad natus, eaque alias autem voluptatum doloribus?</p>
+          </article>
+        </section>
+      
+        <hr>
+      
+        <footer id="footer">
+          <h4>Contact me</h4>
+          <ul>
+            <li>Instagram</li>
+            <li>Telegram</li>
+            <li>Youtube</li>
+          </ul>
+        </footer>
+
+</body>
+</html>
